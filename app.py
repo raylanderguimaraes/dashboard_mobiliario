@@ -9,10 +9,10 @@ st.set_page_config(layout="wide", page_title="Estatísticas Mobiliários")
 
 st.title("Estatísticas Mobiliários")
 
-data = "COPIA_MAPAS_GERAIS.xlsx"
+
 data = st.file_uploader(label="Escolher arquivo")
 
-df = pd.read_excel(data)
+df = pd.read_excel("COPIA_MAPAS_GERAIS.xlsx")
 
 df["MUNÍCIPIO"] = df['MUNÍCIPIO'].str.upper().apply(unidecode)
 
